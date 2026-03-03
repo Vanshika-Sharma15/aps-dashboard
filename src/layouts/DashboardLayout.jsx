@@ -1,6 +1,15 @@
 import { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
+import {
+  LayoutDashboard,
+  Folder,
+  Scan,
+  Calendar,
+  Bell,
+  Settings,
+  LifeBuoy,
+} from "lucide-react";
 
 function DashboardLayout({ children }) {
   const navigate = useNavigate();
@@ -28,11 +37,16 @@ function DashboardLayout({ children }) {
                   : "text-[#4B5563] hover:bg-gray-200"
               }`}
             >
-              Dashboard
+              <LayoutDashboard size={18} />
+              <span>Dashboard</span>
             </div>
 
-            <div className="cursor-pointer px-3 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-teal-500">
-              Projects
+            <div
+              onClick={() => navigate("/projects")}
+              className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-full transition text-[#4B5563] hover:bg-gray-200"
+            >
+              <Folder size={18} />
+              <span>Projects</span>
             </div>
 
             <div
@@ -43,25 +57,42 @@ function DashboardLayout({ children }) {
                   : "text-[#4B5563] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#1F2937]"
               }`}
             >
-              Scans
+              <Scan size={18} />
+              <span>Scan</span>
             </div>
 
-            <div className="cursor-pointer px-3 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-teal-500">
-              Schedule
+            <div
+              onClick={() => navigate("/projects")}
+              className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-full transition text-[#4B5563] hover:bg-gray-200"
+            >
+              <Bell size={18} />
+              <span>Schedule</span>
             </div>
 
             <div className="border-t border-gray-200 my-6"></div>
 
-            <div className="cursor-pointer px-3 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-teal-500">
-              Notifications
+            <div
+              onClick={() => navigate("/projects")}
+              className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-full transition text-[#4B5563] hover:bg-gray-200"
+            >
+              <Calendar size={18} />
+              <span>Notification</span>
             </div>
 
-            <div className="cursor-pointer px-3 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-teal-500">
-              Settings
+            <div
+              onClick={() => navigate("/projects")}
+              className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-full transition text-[#4B5563] hover:bg-gray-200"
+            >
+              <Settings size={18} />
+              <span>Settings</span>
             </div>
 
-            <div className="cursor-pointer px-3 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:text-teal-500">
-              Support
+            <div
+              onClick={() => navigate("/projects")}
+              className="flex items-center gap-3 cursor-pointer px-4 py-3 rounded-full transition text-[#4B5563] hover:bg-gray-200"
+            >
+              <LifeBuoy size={18} />
+              <span>Support</span>
             </div>
           </nav>
         </div>

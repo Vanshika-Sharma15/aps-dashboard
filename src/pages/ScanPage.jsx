@@ -6,6 +6,7 @@ import {
   FlaskConical,
   ShieldCheck,
   FileText,
+  Clock
 } from "lucide-react";
 
 function ScanPage() {
@@ -148,9 +149,10 @@ function ScanPage() {
             <span className="font-semibold text-black dark:text-white">
               Live Scan Console
             </span>
-            <span className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full text-gray-500">
-              Running...
-            </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium">
+  <Clock size={14} />
+  <span>Running...</span>
+</div>
           </div>
 
           <div className="text-gray-400 text-sm cursor-pointer">×</div>
