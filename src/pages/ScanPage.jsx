@@ -39,7 +39,7 @@ function ScanPage() {
 
       {/* Scan Overview */}
       <div className="mt-2 ml-6 bg-white dark:bg-[#111827] rounded-xl shadow-sm p-6">
-        <div className="flex items-center gap-12">
+        <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 dark:text-gray-400">
           {/* LEFT SIDE – PROGRESS CIRCLE */}
           <div className="flex flex-col items-center">
             <div className="w-28 h-28 rounded-full bg-[#0B1B2B] flex items-center justify-center text-white text-3xl font-semibold">
@@ -143,7 +143,7 @@ function ScanPage() {
       {/* CONSOLE + FINDINGS PANEL */}
       <div className="mt-4 ml-6 bg-white dark:bg-[#111827] rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
         {/* Header Strip */}
-        <div className="flex items-center justify-between px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
             <span className="font-semibold text-black dark:text-white">
@@ -231,7 +231,7 @@ function ScanPage() {
 
         {/* Bottom Status Bar */}
         <div className="flex items-center justify-between px-6 py-3 border-t border-gray-200 dark:border-gray-700 text-xs bg-gray-50 dark:bg-[#0F1720]">
-          <div className="flex gap-6 text-gray-600 dark:text-gray-400">
+          <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 dark:text-gray-400">
             <span>Sub-Agents: {statusBar.subAgents}</span>
             <span>Parallel Executions: {statusBar.parallelExecutions}</span>
             <span>Operations: {statusBar.operations}</span>
