@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import {
   LayoutDashboard,
@@ -12,14 +13,32 @@ import {
 } from "lucide-react";
 
 function DashboardLayout({ children }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className="min-h-screen flex bg-gray-100 dark:bg-[#0F0F0F]">
+        {sidebarOpen && (
+        <div
+            className="fixed inset-0 bg-black bg-opacity-30 z-30 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
+        ></div>
+        )}
+        {/* Mobile Top Bar */}
+        <div className="lg:hidden flex items-center justify-between p-4 border-b bg-white dark:bg-[#111]">
+        <span className="font-semibold text-lg">aps</span>
+        <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+            ☰
+        </button>
+        </div>
       {/* SIDEBAR */}
-      <div className="w-64 bg-white dark:bg-[#111] border-r border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between">
+      <div
+        className={`fixed inset-y-0 left-0 z-40 w-64 bg-white dark:bg-[#111] border-r border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between transform transition-transform duration-300
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+        lg:translate-x-0 lg:static`}
+      >
         <div>
           <div className="flex items-center gap-3 mb-10">
             <div className="w-8 h-8 rounded-full bg-[#2BB6A8] flex items-center justify-center">
