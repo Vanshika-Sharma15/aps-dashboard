@@ -158,7 +158,7 @@ function ScanPage() {
           <div className="mr-2 text-gray-400 text-sm cursor-pointer">×</div>
         </div>
 
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-8 mb-8"></div>
+        <div className="border-t border-gray-200 dark:border-gray-700 mt-4 mb-0"></div>
 
         {/* Body */}
         <div className="grid grid-cols-3">
@@ -191,7 +191,7 @@ function ScanPage() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="p-6">
+          <div className="p-6 pt-4">
             <h3 className="font-semibold text-black dark:text-white mb-6">
               Finding Log
             </h3>
