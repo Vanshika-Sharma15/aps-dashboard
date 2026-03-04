@@ -34,10 +34,10 @@ function DashboardLayout({ children }) {
       <div className="flex">
         {/* SIDEBAR */}
         <div
-          className={`fixed inset-y-0 left-0 z-40 w-64 bg-white dark:bg-[#111] border-r border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out
+  className={`fixed top-0 left-0 h-screen z-40 w-64 bg-white dark:bg-[#111] border-r border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out
   ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-  lg:translate-x-0 lg:static lg:transform-none`}
-        >
+  lg:translate-x-0`}
+>
           <div>
             <div className="flex items-center gap-3 mb-10">
               <div className="w-8 h-8 rounded-full bg-[#2BB6A8] flex items-center justify-center">
@@ -142,7 +142,7 @@ function DashboardLayout({ children }) {
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 lg:ml-60 overflow-y-auto">{children}</div>
       </div>
     </div>
   );

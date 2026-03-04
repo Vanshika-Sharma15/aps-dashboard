@@ -156,7 +156,7 @@ function Dashboard() {
       </div>
 
       {/* SCAN TABLE SECTION */}
-      <div className="mt-4 mx-4 bg-white dark:bg-[#111] rounded-lg shadow-sm p-6">
+      <div className="mt-4 ml-6 bg-white dark:bg-[#111] rounded-lg shadow-sm p-6">
         {/* Toolbar */}
         <div className="flex flex-wrap gap-4 justify-between items-center mb-6">
           {/* Search */}
