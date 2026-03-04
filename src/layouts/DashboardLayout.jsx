@@ -28,8 +28,13 @@ function DashboardLayout({ children }) {
       )}
       {/* Mobile Top Bar */}
       <div className="lg:hidden flex items-center justify-between p-4 border-b bg-white dark:bg-[#111]">
-        <span className="font-semibold text-lg">aps</span>
-        <button onClick={() => setSidebarOpen(!sidebarOpen)}>☰</button>
+        <div className="flex items-center gap-3 mb-10">
+              <div className="w-8 h-8 rounded-full bg-[#2BB6A8] flex items-center justify-center">
+                <div className="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              <span className="text-lg font-semibold text-[#2BB6A8]">aps</span>
+            </div>
+        <button className="text-gray-500 dark:text-white" onClick={() => setSidebarOpen(!sidebarOpen)}>☰</button>
       </div>
       <div className="flex">
         {/* SIDEBAR */}
